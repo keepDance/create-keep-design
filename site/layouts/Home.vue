@@ -2,7 +2,7 @@
  * @Author: dushuai
  * @Date: 2024-01-22 11:26:44
  * @LastEditors: dushuai
- * @LastEditTime: 2024-02-02 17:45:48
+ * @LastEditTime: 2024-03-23 22:37:07
  * @description: home
 -->
 <script lang="ts" setup>
@@ -28,29 +28,27 @@ onMounted(() => {
         <div class="max-w-5xl mx-auto text-center px-5 lg:px-0">
           <h2 class="text-gray-200 tracking-wide dark:text-gray-600 select-none">HELLO WORLD !</h2>
 
-          <HomeTitle title="dshuais' homepage" />
+          <HomeTitle title="Create KeepDesign" />
 
           <h3 class="text-lg mt-8 text-gray-800 dark:text-gray-400">
-            <!-- 欢迎访问，这里是我的主页，在这里我主要用来记录我的学习历程和分享自己的实验成果，如果刚好帮到你，你可以打开GitHub并给予一颗星 -->
-            Welcome to visit, here is my home page, where I mainly used to record my learning process and share their own
-            experimental results, if it just helps you, you can open GitHub and give a star.
-            I hope it can help you.
+            一个基于Vite+TypeScript的脚手架，用于快速构建Vue 3组件库开发环境。
+            <!-- 更是一款用于快速生成Vue 3个性化插件模板、Static Site Generator和更多基础模板的脚手架合集。 -->
             <br />
-            <span class="mt-2 block">
+            <!-- <span class="mt-2 block">
               Blogs and notes are accessible:
               <NuxtLink href="https://blog.dshuais.com/" target="_blank"
                 class="text-gray-700 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white font-bold">
                 blog.dshuais.com
               </NuxtLink>
-            </span>
-            <!-- <div class="mt-1">I hope it can help you.</div> -->
+            </span> -->
+            <div class="mt-1">希望它能够帮助到你！</div>
           </h3>
         </div>
 
         <div
           class="relative mx-auto flex items-center space-x-5 w-full justify-center mt-8 px-5 lg:px-0 flex-col lg:flex-row">
-          <ButtonLink class="getStartBtn" href="/about"> Know More About → </ButtonLink>
-          <NuxtLink href="https://github.com/dshuais/homepage/" target="_blank"
+          <ButtonLink class="getStartBtn" href="/about"> Get Started → </ButtonLink>
+          <NuxtLink href="https://github.com/keepDance/create-keep-design/" target="_blank"
             class="text-gray-700 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white font-bold mt-4 lg:mt-0 select-none">
             Open on GitHub and give a star
           </NuxtLink>
@@ -58,12 +56,14 @@ onMounted(() => {
 
         <div class="relative mt-10 lg:mt-24 overflow-x-clip">
           <div data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="300" class="max-w-5xl mx-auto">
-            <div class="SpinAnimation absolute w-[400px] h-[400px] left-[-100px] top-[70px] bg-green-700 rounded-full" />
+            <div
+              class="SpinAnimation absolute w-[400px] h-[400px] left-[-100px] top-[70px] bg-green-700 rounded-full" />
             <div class="SpinAnimation absolute w-[400px] h-[400px] left-[50%] bg-blue-700 rounded-full"
               style="animation-duration: 10000ms" />
             <div class="SpinAnimation absolute w-[400px] h-[400px] right-[50%] bg-pink-700 rounded-full"
               style="animation-direction: reverse; animation-duration: 8000ms" />
-            <div class="SpinAnimation absolute w-[400px] h-[400px] right-[-100px] top-[150px] bg-yellow-700 rounded-full"
+            <div
+              class="SpinAnimation absolute w-[400px] h-[400px] right-[-100px] top-[150px] bg-yellow-700 rounded-full"
               style="animation-direction: reverse; animation-duration: 10000ms" />
           </div>
 
