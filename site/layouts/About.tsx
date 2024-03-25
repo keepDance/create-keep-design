@@ -1,10 +1,13 @@
+
 /*
- * @Author: dushuai
- * @Date: 2024-02-04 10:42:33
+* @Author: dushuai
+* @Date: 2024-02-04 10:42:33
  * @LastEditors: dushuai
- * @LastEditTime: 2024-02-18 11:35:40
- * @description: 关于我
- */
+ * @LastEditTime: 2024-03-25 16:37:03
+* @description: 关于我
+*/
+import { AboutContent, AboutSidebar } from "#components"
+
 export default defineComponent({
   name: 'About',
   setup() {

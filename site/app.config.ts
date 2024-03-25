@@ -2,7 +2,7 @@
  * @Author: dushuai
  * @Date: 2024-01-22 11:26:44
  * @LastEditors: dushuai
- * @LastEditTime: 2024-03-23 22:32:53
+ * @LastEditTime: 2024-03-25 17:44:52
  * @description: app.config
  */
 import { aside } from './config'
@@ -39,7 +39,7 @@ export default defineAppConfig({
       showLinkIcon: true,
       navigation: true,
       fluid: false,
-      exclude: []
+      exclude: ['/about']
     },
 
     footer: {

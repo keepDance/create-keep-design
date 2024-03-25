@@ -2,7 +2,7 @@
  * @Author: dushuai
  * @Date: 2024-01-22 11:26:44
  * @LastEditors: dushuai
- * @LastEditTime: 2024-03-23 22:37:07
+ * @LastEditTime: 2024-03-25 17:49:29
  * @description: home
 -->
 <script lang="ts" setup>
@@ -14,7 +14,7 @@ defineOptions({
 })
 
 onMounted(() => {
-  ThisLog()
+  // ThisLog()
   AOS.init()
 })
 </script>
@@ -99,19 +99,14 @@ onMounted(() => {
         <div class="relative SidebaseContainer">
           <div class="Heading">
             <h1>
-              ✨ <span class="GradientTextPurple">Notes </span>selection !
+              ✨ <span class="GradientTextPurple">模板 </span>精选 !
             </h1>
             <div class="flex flex-col lg:flex-row items-center lg:justify-between">
               <p>
-                <!-- 主要用来记录我的学习笔记，以及学习过程中的一些思考和总结。欢迎光临指导。 -->
-                <!-- It is mainly used to record my learning notes, as well as some thinking and summary in the learning
-                process.
-                Welcome to visit and comment. -->
-                It is mainly used to record my study notes, as well as some thoughts and summaries in the learning
-                process. It will also reprint some other good articles.
+                create-keep-design 收录了多款基础模板，你可以根据需要选择使用。当然也可以添加你觉得有意思的模板，请在下方email我。
               </p>
 
-              <NuxtLink href="https://blog.dshuais.com/blog" target="_blank">
+              <NuxtLink href="/templates">
                 <div class="cursor-pointer flex items-center justify-end view-more relative font-bold pl-1 pr-2">
                   View More
                   <IconArrowsR class="arrows w-4 h-4 text-gray-600 dark:text-gray-200 ml-2" />

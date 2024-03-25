@@ -1,6 +1,6 @@
 ---
 # navigation: true
-title: labs
+title: projects
 ---
 
 正在构建中...

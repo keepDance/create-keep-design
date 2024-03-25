@@ -2,10 +2,11 @@
  * @Author: dushuai
  * @Date: 2024-01-28 17:37:23
  * @LastEditors: dushuai
- * @LastEditTime: 2024-01-30 11:27:07
+ * @LastEditTime: 2024-03-25 17:18:21
  * @Description: 笔记列表
  */
 // import { HomeNotesCard } from '#components' // 阻止使用时报错 报错也不影响
+import { HomeNotesCard } from '#components'
 import { type Note, notes } from '@/config'
 
 export default defineComponent({
