@@ -2,7 +2,7 @@
  * @Author: dushuai
  * @Date: 2024-01-23 18:26:02
  * @LastEditors: dushuai
- * @LastEditTime: 2024-01-25 18:28:07
+ * @LastEditTime: 2024-03-26 15:04:57
  * @description: bash
 -->
 <script setup lang="ts">
@@ -32,8 +32,12 @@ function scrollToTop(this: any) {
     <v-termynal class="AnimatedTerminal" forward-button restart-button lazy @before-new-line="scrollToNewLine($event)"
       @restart="scrollToTop()">
       <div ref="container" class="line-container">
-        <vt-input :lineDelay="500">Hi there 👋</vt-input>
-        <vt-input :lineDelay="500" :typeDelay="45">The writer is connecting...</vt-input>
+        <vt-input :lineDelay="500">pnpm create keepdesign</vt-input>
+        <vt-text :lineDelay="500">请输入项目名称</vt-text>
+
+
+
+        <vt-input :lineDelay="0" :typeDelay="0">请输入项目名称</vt-input>
         <vt-progress :lineDelay="1000" prefix="&nbsp;" />
         <!-- <vt-input :lineDelay="500">✨ Success !</vt-input> -->
         <vt-text :lineDelay="500">
