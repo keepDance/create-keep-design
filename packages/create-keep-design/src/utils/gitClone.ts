@@ -2,7 +2,7 @@
  * @Author: dushuai
  * @Date: 2024-01-10 09:35:22
  * @LastEditors: dushuai
- * @LastEditTime: 2024-01-10 10:06:38
+ * @LastEditTime: 2024-03-26 17:18:45
  * @description: 模板下载命令
  */
 import download from 'download-git-repo'
@@ -32,7 +32,7 @@ export default (remote, name, option, tempIndex) => {
         console.log(chalk.blue(`pnpm dev\r\n`));
       }
 
-      resolve()
+      resolve(void 0)
     })
   })
 }

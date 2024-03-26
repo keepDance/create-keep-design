@@ -1,26 +1,22 @@
 /*
  * @Author: dushuai
- * @Date: 2024-01-10 09:33:53
+ * @Date: 2024-03-26 15:27:20
  * @LastEditors: dushuai
- * @LastEditTime: 2024-01-10 10:04:28
+ * @LastEditTime: 2024-03-26 17:36:38
  * @description: 模板命令
  */
-import commandLineArgs from "command-line-args";
-import commandLineUsage from "command-line-usage";
-import prompts from "prompts";
-import { readFile } from "fs/promises";
-import gitClone from "./utils/gitClone.js";
-
-/**
- * package.json
- */
-const pkgJSON = JSON.parse(await readFile(new URL("./package.json", import.meta.url)));
+import commandLineArgs from 'command-line-args';
+import commandLineUsage from 'command-line-usage';
+import prompts from 'prompts';
+import gitClone from './utils/gitClone';
+import { getVersion } from './utils/getVersion'
 
 /**
  * 配置命令参数
  */
 const optionDefinitions = [
   { name: 'version', alias: 'v', type: Boolean },
+  { name: 'templates', alias: 'l', type: Boolean },
   { name: 'help', alias: 'h', type: Boolean }
 ]
 
@@ -29,22 +25,28 @@ const optionDefinitions = [
  */
 const helpSections = [
   {
-    header: 'create-keep-design',
+    header: 'create keepdesign',
     content: '一个快速生成组件库搭建环境的脚手架'
   },
   {
     header: 'Options',
-    optionsList: [
+    optionList: [
       {
         name: 'version',
         alias: 'v',
-        typeLabel: '{underline boolean}',
+        // typeLabel: '{underline boolean}',
         description: '版本号'
+      },
+      {
+        name: 'templates',
+        alias: 'l',
+        description: '模板列表'
       },
       {
         name: 'help',
         alias: 'h',
-        typeLabel: '{underline boolean}',
+        type: Boolean,
+        // typeLabel: '{underline boolean}',
         description: '帮助'
       }
     ]
@@ -78,7 +80,7 @@ const promptsOptions = [
  * 模板github地址and分支
  */
 const remoteList = {
-  1: 'https://github.com/dshuais/create-keep-design#main',
+  1: 'https://github.com/keepDance/create-keep-design.git#main',
   2: 'https://github.com/dshuais/vue3-mobile-template',
   3: 'https://github.com/dshuais/vue3-pc-template',
   4: 'https://github.com/dshuais/nuxt-template#main'
@@ -98,9 +100,16 @@ const getCloneTemplate = async () => {
 /**
  * 执行操作
  */
-const run = () => {
+const run = async () => {
   if (options.help) return console.log(commandLineUsage(helpSections));
-  if (options.version) return console.log(`v${pkgJSON.version}`)
+  if (options.version) {
+    const version = await getVersion()
+    return console.log(`create-keepdesign v${version}`)
+  }
+  if (options.templates) {
+    console.log(remoteList);
+    return
+  }
   getCloneTemplate()
 }
 

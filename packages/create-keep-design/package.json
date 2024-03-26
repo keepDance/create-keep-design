@@ -1,10 +1,22 @@
 {
   "name": "create-keepdesign",
-  "version": "0.0.4",
+  "version": "0.0.6",
   "description": "一个快速生成组件库搭建环境的脚手架",
-  "main": "index.js",
-  "bin": "index.js",
+  "main": "./dist/index.js",
+  "bin": {
+    "create-keepdesign": "./dist/index.js"
+  },
   "type": "module",
+  "scripts": {
+    "dev": "vite-node src/",
+    "start": "npx",
+    "typecheck": "tsc -p ./tsconfig.json --emitDeclarationOnly --declaration",
+    "build": "rm -rf dist && tsup src/ --format esm --treeshake",
+    "prepack": "pnpm build"
+  },
+  "files": [
+    "dist"
+  ],
   "keywords": [
     "cli",
     "keep-design",
@@ -18,7 +30,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/dshuais/create-keep-design"
+    "url": "https://github.com/keepDance/create-keep-design"
   },
   "homepage": "https://create-keep-design.dshuais.com/",
   "dependencies": {
@@ -26,7 +38,12 @@
     "command-line-args": "^5.2.1",
     "command-line-usage": "^7.0.1",
     "download-git-repo": "^3.0.2",
+    "node-fetch": "^3.3.2",
     "ora": "^8.0.1",
     "prompts": "^2.4.2"
+  },
+  "devDependencies": {
+    "tsup": "^8.0.2",
+    "vite-node": "^1.4.0"
   }
 }

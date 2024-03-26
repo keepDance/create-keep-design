@@ -42,6 +42,7 @@
     "rimraf": "^5.0.5",
     "sass": "^1.69.7",
     "shelljs": "^0.8.5",
+    "tsup": "^8.0.2",
     "typescript": "^5.2.2",
     "unplugin-auto-import": "^0.17.3",
     "unplugin-icons": "^0.18.2",

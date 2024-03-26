@@ -21,7 +21,8 @@
     "dev": "node ./build.js -w",
     "build:types": "tsc -p ./tsconfig.json --emitDeclarationOnly",
     "build:bundle": "node ./build.js",
-    "build": "pnpm clean && pnpm build:bundle && pnpm build:types"
+    "build": "pnpm clean && pnpm build:bundle && pnpm build:types",
+    "prepack": "pnpm clean && tsup src/ --format esm,cjs --treeshake && pnpm build:types"
   },
   "keywords": [],
   "author": "dshuais",
