@@ -2,15 +2,14 @@
  * @Author: dushuai
  * @Date: 2024-03-26 15:27:20
  * @LastEditors: dushuai
- * @LastEditTime: 2024-03-28 17:59:43
+ * @LastEditTime: 2024-03-28 18:30:41
  * @description: 模板命令
  */
 import commandLineArgs from 'command-line-args';
 import commandLineUsage from 'command-line-usage';
 import prompts from 'prompts';
 import gitClone from './utils/gitClone';
-import { getVersion } from './utils/getVersion'
-import { welcome } from './message';
+import { sayTemplates, sayVersion, welcome } from './message';
 
 /**
  * 配置命令参数
@@ -47,7 +46,6 @@ const helpSections = [
         name: 'help',
         alias: 'h',
         type: Boolean,
-        // typeLabel: '{underline boolean}',
         description: '帮助'
       }
     ]
@@ -58,11 +56,6 @@ const helpSections = [
  * 下载步骤
  */
 const promptsOptions = [
-  // {
-  //   type: 'text',
-  //   name: 'hello',
-  //   message: "🐑",
-  // },
   {
     type: 'text',
     name: 'name',
@@ -105,7 +98,6 @@ const onCancel = () => {
  * 执行
  */
 const getCloneTemplate = async () => {
-  // console.log('请输入项目名称和模板');
   await welcome()
   const res = await prompts(promptsOptions, { onCancel })
   if (!res.name || !res.template) return
@@ -116,15 +108,12 @@ const getCloneTemplate = async () => {
  * 执行操作
  */
 const run = async () => {
-  if (options.help) return console.log(commandLineUsage(helpSections));
-  if (options.version) {
-    const version = await getVersion()
-    return console.log(`create-keepdesign v${version}`)
-  }
-  if (options.templates) {
-    console.log(remoteList);
-    return
-  }
+  if (options.help) return console.log(commandLineUsage(helpSections))
+
+  if (options.version) return sayVersion()
+
+  if (options.templates) return sayTemplates()
+
   getCloneTemplate()
 }
 
