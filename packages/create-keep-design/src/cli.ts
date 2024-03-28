@@ -2,7 +2,7 @@
  * @Author: dushuai
  * @Date: 2024-03-26 15:27:20
  * @LastEditors: dushuai
- * @LastEditTime: 2024-03-26 17:36:38
+ * @LastEditTime: 2024-03-28 17:59:43
  * @description: 模板命令
  */
 import commandLineArgs from 'command-line-args';
@@ -10,6 +10,7 @@ import commandLineUsage from 'command-line-usage';
 import prompts from 'prompts';
 import gitClone from './utils/gitClone';
 import { getVersion } from './utils/getVersion'
+import { welcome } from './message';
 
 /**
  * 配置命令参数
@@ -57,6 +58,11 @@ const helpSections = [
  * 下载步骤
  */
 const promptsOptions = [
+  // {
+  //   type: 'text',
+  //   name: 'hello',
+  //   message: "🐑",
+  // },
   {
     type: 'text',
     name: 'name',
@@ -89,10 +95,19 @@ const remoteList = {
 const options = commandLineArgs(optionDefinitions)
 
 /**
- * 下载
+ * 取消
+ */
+const onCancel = () => {
+  console.log("Aborting mission - have a pleasent day 👋")
+}
+
+/**
+ * 执行
  */
 const getCloneTemplate = async () => {
-  const res = await prompts(promptsOptions)
+  // console.log('请输入项目名称和模板');
+  await welcome()
+  const res = await prompts(promptsOptions, { onCancel })
   if (!res.name || !res.template) return
   gitClone(`direct:${remoteList[res.template]}`, res.name, { clone: true }, res.template)
 }
