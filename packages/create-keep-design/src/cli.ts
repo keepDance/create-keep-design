@@ -2,7 +2,7 @@
  * @Author: dushuai
  * @Date: 2024-03-26 15:27:20
  * @LastEditors: dushuai
- * @LastEditTime: 2024-03-28 18:30:41
+ * @LastEditTime: 2024-04-02 09:53:35
  * @description: 模板命令
  */
 import commandLineArgs from 'command-line-args';
@@ -71,6 +71,8 @@ const promptsOptions = [
       { title: 'vue3-mobile-template', value: 2 },
       { title: 'vue3-pc-template', value: 3 },
       { title: 'nuxt-template', value: 4 },
+      { title: 'react-pc-template', value: 5 },
+      { title: 'java-template', value: 10 },
     ]
   }
 ]
@@ -80,9 +82,11 @@ const promptsOptions = [
  */
 const remoteList = {
   1: 'https://github.com/keepDance/create-keep-design.git#main',
-  2: 'https://github.com/dshuais/vue3-mobile-template',
-  3: 'https://github.com/dshuais/vue3-pc-template',
-  4: 'https://github.com/dshuais/nuxt-template#main'
+  2: 'https://github.com/dshuais/vue3-mobile-template.git',
+  3: 'https://github.com/dshuais/vue3-pc-template.git',
+  4: 'https://github.com/dshuais/nuxt-template.git#main',
+  5: 'https://github.com/dshuais/react-template.git#main',
+  10: 'https://github.com/dshuais/java-template.git',
 }
 
 const options = commandLineArgs(optionDefinitions)
