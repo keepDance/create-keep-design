@@ -2,7 +2,7 @@
  * @Author: dushuai
  * @Date: 2024-03-26 15:27:20
  * @LastEditors: dushuai
- * @LastEditTime: 2024-04-02 09:53:35
+ * @LastEditTime: 2024-08-04 13:49:47
  * @description: 模板命令
  */
 import commandLineArgs from 'command-line-args';
@@ -70,9 +70,28 @@ const promptsOptions = [
       { title: 'keep-design', value: 1 },
       { title: 'vue3-mobile-template', value: 2 },
       { title: 'vue3-pc-template', value: 3 },
-      { title: 'nuxt-template', value: 4 },
       { title: 'react-pc-template', value: 5 },
-      { title: 'java-template', value: 10 },
+      { title: 'react-mobile-template', value: 6 },
+      { title: 'nuxt-template', value: 4 },
+      { title: 'next-template', value: 7 },
+
+      { title: 'taro-template', value: 20 },
+      { title: 'uni3-template', value: 21 },
+
+      { title: 'java-template', value: 30 },
+      { title: 'nest-template', value: 31 },
+
+      { title: 'rn-template', value: 40 },
+
+      { title: 'qiankun-main', value: 50 },
+      { title: 'qiankun-micro', value: 51 },
+
+      // 杂项
+      { title: 'farm-react', value: 100 },
+
+      { title: 'site-react', value: 200 },
+      { title: 'site-vue', value: 201 },
+
     ]
   }
 ]
@@ -86,7 +105,24 @@ const remoteList = {
   3: 'https://github.com/dshuais/vue3-pc-template.git',
   4: 'https://github.com/dshuais/nuxt-template.git#main',
   5: 'https://github.com/dshuais/react-template.git#main',
-  10: 'https://github.com/dshuais/java-template.git',
+  6: 'https://github.com/dshuais/react-mobile-template.git#main',
+  7: 'https://github.com/dshuais/next-template.git#main',
+
+  20: 'https://github.com/dshuais/taro-template.git#main',
+  21: 'https://github.com/dshuais/uni3-template.git#main',
+
+  30: 'https://github.com/dshuais/java-template.git',
+  31: 'https://github.com/dshuais/nest-template.git#main',
+
+  40: 'https://github.com/dshuais/react-native-template.git',
+
+  50: 'https://github.com/dshuais/qiankun-first.git#main',
+  51: 'https://github.com/dshuais/microApps.git#main',
+
+  100: 'https://github.com/dshuais/farm-project.git#main',
+
+  200: 'https://github.com/dshuais/site-react.git#main',
+  201: 'https://github.com/dshuais/site-vue.git#main'
 }
 
 const options = commandLineArgs(optionDefinitions)
