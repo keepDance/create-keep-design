@@ -72,8 +72,10 @@ const promptsOptions = [
       { title: 'vue3-pc-template', value: 3 },
       { title: 'react-pc-template', value: 5 },
       { title: 'react-mobile-template', value: 6 },
+      { title: 'react-admin-turbo', value: 8 },
       { title: 'nuxt-template', value: 4 },
       { title: 'next-template', value: 7 },
+      { title: 'next-site-turbo', value: 9 },
 
       { title: 'taro-template', value: 20 },
       { title: 'uni3-template', value: 21 },
@@ -107,6 +109,8 @@ const remoteList = {
   5: 'https://github.com/dshuais/react-template.git#main',
   6: 'https://github.com/dshuais/react-mobile-template.git#main',
   7: 'https://github.com/dshuais/next-template.git#main',
+  8: 'https://github.com/dshuais/react-admin-turbo.git',
+  9: 'https://github.com/dshuais/next-site-turbo.git',
 
   20: 'https://github.com/dshuais/taro-template.git#main',
   21: 'https://github.com/dshuais/uni3-template.git#main',
